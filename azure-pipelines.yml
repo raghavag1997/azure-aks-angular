@@ -24,12 +24,15 @@ steps:
   inputs:
     command: 'install'
     workingDir: '.'
+  enabled: false
   displayName: 'Installing the Packages'
+  
 
 - task: Npm@1
   inputs:
     command: 'custom'
     workingDir: '.'
     customCommand: 'run build'
+  enabled: false
   displayName: 'Bulding the code'
 
