@@ -24,7 +24,6 @@ steps:
   inputs:
     command: 'install'
     workingDir: '.'
-  enabled: true
   displayName: 'Installing the Packages'
   
 
@@ -33,6 +32,5 @@ steps:
     command: 'custom'
     workingDir: '.'
     customCommand: 'run build'
-  enabled: true
   displayName: 'Bulding the code'
 
