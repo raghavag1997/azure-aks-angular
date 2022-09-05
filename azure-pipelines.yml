@@ -2,7 +2,7 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-
+i
 trigger:
 - main
 
@@ -24,7 +24,7 @@ steps:
   inputs:
     command: 'install'
     workingDir: '.'
-  enabled: false
+  enabled: true
   displayName: 'Installing the Packages'
   
 
@@ -33,6 +33,6 @@ steps:
     command: 'custom'
     workingDir: '.'
     customCommand: 'run build'
-  enabled: false
+  enabled: true
   displayName: 'Bulding the code'
 
