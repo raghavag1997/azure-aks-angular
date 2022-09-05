@@ -1,7 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
 trigger:
 - main
 
@@ -37,7 +33,7 @@ steps:
   inputs:
     SourceFolder: 'dist/my-app/'
     Contents: '**'
-    TargetFolder: '${Build.ArtifactStagingDirectory}'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
