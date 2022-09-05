@@ -19,3 +19,17 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '.'
+  displayName: 'Installing the Packages'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: '.'
+    customCommand: 'run build'
+  displayName: 'Bulding the code'
+
