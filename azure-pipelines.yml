@@ -4,7 +4,7 @@ trigger:
 pool:
   name: Default
   demands:
-   - agent.name -equals HP
+   - agent.name -equals Windows-Machine
 
 steps:
 - script: echo Hello, world!
