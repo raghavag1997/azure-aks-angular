@@ -1,8 +1,9 @@
 trigger:
 - main
-
 pool:
-  name: Default
+  name: default
+  demands:
+   - agent.name -equals Windows-Machine
 
 steps:
 - task: DockerInstaller@0
