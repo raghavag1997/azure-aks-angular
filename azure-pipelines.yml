@@ -39,8 +39,8 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'dist/my-app/'
-    Contents: '**'
+    SourceFolder: '.'
+    Contents: 'Deployment.yaml'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
