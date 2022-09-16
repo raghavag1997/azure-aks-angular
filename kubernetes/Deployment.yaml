@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: mywebserver:42
+        image: tcstraining.azurecr.io/mywebserver:42
         ports:
         - containerPort: 80
