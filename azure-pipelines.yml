@@ -10,7 +10,9 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '16.17.0'
-
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
 
 - task: Npm@1
   inputs:
@@ -25,6 +27,7 @@ steps:
     workingDir: '.'
     customCommand: 'run build'
   displayName: 'Bulding the code'
+
 
 - task: CopyFiles@2
   inputs:
