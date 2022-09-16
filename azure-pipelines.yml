@@ -2,8 +2,6 @@ trigger:
 - main
 pool:
   name: default
-  demands:
-   - agent.name -equals LinuxMachine
 
 steps:
 - task: Npm@1
