@@ -3,19 +3,15 @@ trigger:
 pool:
   name: default
   demands:
-   - agent.name -equals Windows-Machine
+   - agent.name -equals LinuxMachine
 
 steps:
-- task: DockerInstaller@0
-  inputs:
-    dockerVersion: '17.09.0-ce'
 - task: Npm@1
   inputs:
     command: 'install'
     workingDir: '.'
   displayName: 'Installing the Packages'
   
-
 - task: Npm@1
   inputs:
     command: 'custom'
