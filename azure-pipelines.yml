@@ -4,15 +4,12 @@ trigger:
 pool:
   name: Default
   demands:
-   - agent.name -equals Windows-Machine
+   - agent.name -equals LinuxMachine
 
 steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '16.17.0'
-- task: DockerInstaller@0
-  inputs:
-    dockerVersion: '17.09.0-ce'
 
 - task: Npm@1
   inputs:
