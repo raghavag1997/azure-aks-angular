@@ -2,9 +2,7 @@ trigger:
 - main
 pool:
   name: Default
-  demands:
-  - Agent.Name -equals LinuxMachine
-
+  
 steps:
 - task: Npm@1
   inputs:
